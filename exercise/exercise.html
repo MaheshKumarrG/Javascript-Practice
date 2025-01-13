@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="data:,">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css-button {
+            padding: 6px 11px;
+            font-size: 18px;
+            background-color: rgba(169, 168, 168, 0.708);
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .updated {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="updateTitle();">
+
+    <button class="css-button js-button" onclick="
+            changeStyle(this);
+        ">Gaming</button>
+    <button class="css-button js-button" onclick="
+            changeStyle(this);
+        ">Music</button>
+    <button class="css-button js-button" onclick="
+            changeStyle(this);
+        ">Tech</button>
+    <br><br><br>
+    <button class="js-finish-button" onclick="
+            changeBtn();
+        ">Start</button>
+    <br><br><br>
+    <button onclick="
+        addCart();
+    " class="js-cart-btn">Add to Cart</button>
+    <p class="js-added-msg"></p>
+    <br><br>
+
+    <button onclick="
+        message ++;
+        updateTitle();
+    ">Add</button>
+    <button onclick="
+        message--;
+        updateTitle();
+    ">Remove</button>
+    <br><br>
+    
+
+
+    <script src="exercise.js" type="module"></script>
+</body>
+
+</html>

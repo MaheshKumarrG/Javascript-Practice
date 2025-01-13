@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <button onclick="
+            console.log(`quantity is ${quantity}`);
+            QntShow(quantity);
+        ">
+        Show Quantity
+    </button>
+    <button onclick="
+            if((quantity+1) > 10) alert('the cart is full');
+            else{
+                quantity++;
+                console.log(`quantity is ${quantity}`);
+                QntShow(quantity);
+
+            }            
+    ">
+        Add to Cart
+    </button>
+    <button onclick="
+            if((quantity+2) > 10) alert('the cart is full');
+            else{
+                quantity = quantity + 2;
+                console.log(`quantity is ${quantity}`);
+                QntShow(quantity);
+
+            }
+    ">
+        +2
+    </button>
+    <button onclick="
+            if((quantity+3) > 10) alert('the cart is full');
+            else{
+            quantity+=3;
+            QntShow(quantity);
+            console.log(`quantity is ${quantity}`);}
+    ">
+        +3
+    </button>
+    <button onclick="
+            quantity=0;
+            alert(`cart was reset`);
+            QntShow(quantity);
+            console.log(`quantity is ${quantity}`);
+    ">
+        Reset Cart
+    </button>
+    <p class="js-show-quantity"></p>
+    <br><br><br>
+
+    <p>
+        Amazon Shipping Calculator
+    </p>
+    <p>
+        Orders under $40 = +$10 shipping.
+    </p>
+    <p>
+        Orders over $40 = FREE shipping.
+    </p>
+    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="
+        if (event.key === 'Enter') calCost();
+    ">
+    <button onclick="
+        calCost();
+    ">
+        Calculate
+    </button>
+    <p class="js-final-cost"></p>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

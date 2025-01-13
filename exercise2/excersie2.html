@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:,">
+</head>
+<style>
+    .subscribed {
+        padding: 5px 8px 5px 8px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<body style="margin-bottom: 1000px;">
+    <h1>I am starting my journey in JS</h1>
+    <br>
+    <h3>youtube subscribe button</h3>
+    <button onclick="
+        subsUpdate();
+    " class="js-subs-button">
+        Subscribe
+    </button>
+    <br><br><br>
+
+    <input type="text" placeholder="Name" id="" class="js-input-name" onkeydown="
+        if(event.key === 'Enter') displayName();
+    ">
+    <button onclick="
+        displayName();
+    ">
+        Submit
+    </button>
+    <p class="js-display-name"></p>
+
+    <br><br>
+    <input class="js-type-input" type="text" placeholder="Type something" onkeyup="
+            onTyping();
+        ">
+    <p class="js-display-text"></p>
+
+    <button class="js-event-btn">Event</button>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
